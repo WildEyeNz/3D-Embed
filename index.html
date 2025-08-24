@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Transparent 3D Model</title>
+    <title>Transparent Model</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
     <style>
       body {
@@ -11,28 +11,22 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        /* Background Options */
-        background: url("background.jpg") no-repeat center center / cover;
-        /* Or just use: background: linear-gradient(135deg, #0077ff, #00ffcc); */
-        /* Or replace with video (ask me if you want the code for that) */
+        background: url("background.jpg") no-repeat center center / cover; /* or solid color, or video */
       }
-
       model-viewer {
         width: 80vw;
         height: 80vh;
-        background-color: transparent; /* key for transparency */
+        background-color: transparent;
       }
     </style>
   </head>
   <body>
-    <model-viewer src="Monkey.glb"
-                  alt="My 3D Model"
+    <model-viewer src="Monkey.glb" 
+                  alt="Transparent Model"
                   auto-rotate
                   camera-controls
                   background-color="transparent"
-                  environment-image="https://modelviewer.dev/shared-assets/environments/neutral.hdr"
-                  shadow-intensity="1"
-                  exposure="1.2">
+                  environment-image="none">
     </model-viewer>
   </body>
 </html>
