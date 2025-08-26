@@ -31,8 +31,25 @@
       shadow-intensity="1"
       exposure="1.2">
     </model-viewer>
+     
+    <script>
+    // List of models
+    const models = [
+      "Monkey.glb",
+      "BulbStand.glb",
+      "MAC001.glb"
+    ];
+
+    // Pick random model
+    const randomModel = models[Math.floor(Math.random() * models.length)];
+
+    // Assign it to viewer
+    document.getElementById("viewer").src = randomModel;
+  </script>
+  
   </body>
 </html>
+
 
 
 
